@@ -1,0 +1,38 @@
+<div [ngClass]="getWeatherClass()" class="weather-container p-4 rounded">
+<div *ngIf="weather" class="card shadow-sm mt-4">
+  <div class="card-body">
+    <h5 class="card-title">Weather in {{ weather.city.name }}</h5>
+    <p class="card-text">
+      <strong>Temperature:</strong> {{ weather.list[0].main.temp }} °C<br>
+      <strong>Condition:</strong> {{ weather.list[0].weather[0].description }}<br>
+      <strong>Humidity:</strong>  {{ weather.list[0].main.humidity }}%<br>
+      <strong>Wind:</strong> {{ weather.list[0].wind.speed }} m/s
+    </p>
+  </div>
+</div>
+
+
+
+<div *ngIf="error" class="alert alert-danger mt-3">
+  {{ error }}
+</div>
+
+<div *ngIf="dailyForecasts.length" class="row row-cols-1 row-cols-md-5 g-4 mt-4">
+  <div *ngFor="let forecast of dailyForecasts" class="col">
+    <div class="card h-100 text-center shadow-sm">
+      <div class="card-body">
+        <h6 class="card-title">{{ forecast.dt_txt | date: 'EEEE' }}</h6>
+        <p class="mb-1">{{ forecast.dt_txt | date: 'MMM d' }}</p>
+        <img
+          [src]="'https://openweathermap.org/img/wn/' + forecast.weather[0].icon + '.png'"
+          [alt]="forecast.weather[0].description"
+        />
+        <p class="mt-2">
+          <strong>{{ forecast.main.temp }} °C</strong><br />
+          <small class="text-muted">{{ forecast.weather[0].description }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

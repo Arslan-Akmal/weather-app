@@ -1,0 +1,8 @@
+<div class="container mt-5 app-background">
+  <h1 class="text-center mb-4 text-primary">🌍 WanderEasy Weather</h1>
+
+  <app-city-selector (cityChange)="selectedCity = $event" class="m-4"></app-city-selector>
+
+  <app-weather-display *ngIf="selectedCity" [city]="selectedCity" class="m-4"></app-weather-display>
+</div>
+

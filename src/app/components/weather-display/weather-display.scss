@@ -1,0 +1,16 @@
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+.weather-container {
+  min-height: 400px; /* Enough height to show background */
+  border-radius: 8px;
+  color: inherit; /* keep text color from class */
+  transition: background 0.5s ease;
+}

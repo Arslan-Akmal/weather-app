@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(45deg, #fbc7a4, #9796f0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weather-clear {
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
+  color: white;
+}
+
+.weather-rain {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: white;
+}
+
+.weather-clouds {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+  color: white;
+}
+
+.weather-snow {
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  color: black;
+}
+
+.weather-thunderstorm {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+}
+
+.weather-default {
+  background: #f5f7fa;
+  color: black;
+}
